@@ -1,1 +1,5 @@
-Hello world!
+<?php
+
+  header("location: /uppsala/index.php");
+
+?>
