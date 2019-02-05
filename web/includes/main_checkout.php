@@ -9,8 +9,9 @@
 		        <span id="total_items" class="badge badge-secondary badge-pill">3</span>
 	      	</h4>
 	      	<ul class="list-group mb-3">
-		        <?php
-		        	$totals=0;
+				<?php
+				 
+					$totals=0; 
 		        	for ($i=0; $i < ($_SESSION['nItems']) ; $i++) { 
 		        		$img = $_SESSION['img'.$i];
 		        		$name=$_SESSION['name'.$i];
@@ -30,8 +31,8 @@
 		        ?>
 
 		        <li class="list-group-item d-flex justify-content-between">
-		          	<span>Total (USD)</span>
-		          	<strong><?php echo $_SESSION['total']."$"; ?></strong>
+		          	<span>Total (EUR)</span>
+		          	<strong><?php echo $_SESSION['total']."€"; ?></strong>
 		        </li>
 	      	</ul>
 
@@ -167,9 +168,9 @@
 		    
 		        myCountries = ['Africa', 'America', 'Asia', 'Europe'], // australia does not exist
 		        
-		        Africa = ['-- not selected --','Egypt', 'South-Africa', 'Ghana', 'Maroco', 'Other'],
+		        Africa = ['-- not selected --','Egypt', 'South-Africa', 'Ghana', 'Morocco', 'Other'],
 		        
-		        America = ['-- not selected --','Utha', 'New-York','California','Colorado','Arizona','Texas','Other'],
+		        America = ['-- not selected --','Utah', 'New-York','California','Colorado','Arizona','Texas','Other'],
 		        
 		        Asia = ['-- not selected --','Japan', 'Philippines', 'Cambodia', 'China', 'India', 'Other'],
 		        

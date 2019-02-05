@@ -1,58 +1,88 @@
 <section id="user_section">
 	<div class="container">
-		<?php
-			$servername = "127.0.0.1";
-			$username = "root";
-			$password = "";
-			$dbname = "Assignment";
-			$conn = new mysqli($servername, $username, $password, $dbname);
-			// Check connection
-			if ($conn->connect_error) {
-			    die("Connection failed: " . $conn->connect_error);
-			}
-			else{
-				$sql = "
-				  SELECT email, id 
-				  FROM users
-				  WHERE Email = '".$_COOKIE['login']."' AND Password = '".$_COOKIE['pass']."'" ;
-				$row = mysqli_fetch_assoc($conn->query($sql) );
-				$HTML  = "<h2 class='centered p-25'> Welcome </h2>";
-				$sql2= "
-				  SELECT ID, Name, Description, Min_Age, Avg_Duration, Suggested_Players, Brand, Image, Price, Availability
-				  FROM Boardgame";
-				$result = $conn->query($sql2);
-				$HTML  .= "<div id='cart_container'>";
-				while($cart = $result->fetch_assoc()) {
-					$testtest="";
-					if (isset($_COOKIE["cart_cookie_".$cart['ID']])) {
-						$testtest="<h2 class='chosen'> chosen ".$_COOKIE["cart_cookie_".$cart['ID']]." times </h2>";
-					}
-					$suggested_players = $cart['Suggested_Players']>0 ? $cart['Suggested_Players'] : "Any Size allowed";
-					$available = $cart['Availability'] > 0 ? ' ' : 'unavailable' ;
-				  	$HTML  .= "	
-			  					<div class='row boardgame_detail ".$available." '>
-				               		<img src='".$cart['Image']."' class='cart_image'>
-				               		<div class='boardgame_details_container'>
-						  			    <p><b>Name :</b> ".$cart['Name']."</p> 
-						               	<p><b>Description :</b> ".   $cart['Description']."</p>
-						               	<p><b>Min_Age :</b> ".   $cart['Min_Age']."</p>
-						               	<p><b>Avg_Duration :</b> ".   $cart['Avg_Duration']."min</p>
-						               	<p><b>Suggested_Players :</b> ".$suggested_players."</p>
-						               	<p><b>Brand :</b> ".   $cart['Brand']."</p>
-						               	<p><b>Price :</b> ".   $cart['Price']."$</p>
-						               	<p><b>Availability :</b> ".   $cart['Availability']."</p>
-						               	".$testtest."
-						               	<a href= 'templates/addToCart.php?item=".$cart['ID']."' id='".$cart['ID']."' class='btn button_add_cart'></a>
-					               	</div>
-				               	</div>
-				               	<div class='line'></div>
-
-				  ";
+		<h2 class='centered p-25'> Welcome fellow boardagamer! </h2>
+		<div id='cart_container'>
+			<?php
+				$chosenN="";
+				if (isset($_COOKIE["cart_cookie_con"])) {
+					$chosenN="<h2 class='chosen'> chosen ".$_COOKIE["cart_cookie_con"]." times </h2>";
 				}
-				$HTML .= "</div>";    
-				echo $HTML;
-			}
-			$conn->close();
-		?>
+			?>
+			<div class="row boardgame_detail">
+				<img src='img/concept.jpg' class='cart_image'>
+				<div class='boardgame_details_container'>			
+					<p><b>Name :</b> Concept </p> 
+					<p><b>Description :</b>A game of word guessing with simple images and ... concepts</p>
+					<p><b>Min_Age :</b>6</p>
+					<p><b>Avg_Duration :</b>2 to 222 minutes</p>
+					<p><b>Suggested_Players :</b>4+ players</p>
+					<p><b>Brand :</b>Repos Production</p>
+					<p><b>Price :</b>30€</p>
+					<p><b>Availability :</b>Available <?php echo $chosenN ?></p>
+					<a href= 'templates/addToCart.php?item=con' class='btn button_add_cart'></a>
+				</div>				
+			</div>
+			<?php
+				$chosenN="";
+				if (isset($_COOKIE["cart_cookie_hb"])) {
+					$chosenN="<h2 class='chosen'> chosen ".$_COOKIE["cart_cookie_hb"]." times </h2>";
+				}
+			?>
+			<div class="row boardgame_detail">
+			<img src='img/hanabi.jpg' class='cart_image'>
+				<div class='boardgame_details_container'>	
+					<p><b>Name :</b> Hanabi </p> 
+					<p><b>Description :</b>if you think you are smart, you nevver played hanabi</p>
+					<p><b>Min_Age :</b>8</p>
+					<p><b>Avg_Duration :</b>15-20 minutes</p>
+					<p><b>Suggested_Players :</b>3-5 players</p>
+					<p><b>Brand :</b>Oliphante</p>
+					<p><b>Price :</b>15€</p>
+					<p><b>Availability :</b>Available <?php echo $chosenN ?></p>
+					<a href= 'templates/addToCart.php?item=hb' class='btn button_add_cart'></a>
+				</div>
+			</div>								
+			<?php
+				$chosenN="";
+				if (isset($_COOKIE["cart_cookie_df"])) {
+					$chosenN="<h2 class='chosen'> chosen ".$_COOKIE["cart_cookie_df"]." times </h2>";
+				}
+			?>
+			<div class="row boardgame_detail">
+			<img src='img/diceforge.jpg' class='cart_image'>
+				<div class='boardgame_details_container'>
+					<p><b>Name :</b> Dice Forge </p> 
+					<p><b>Description :</b>A dice-rolling game, but you can create your own dice!</p>
+					<p><b>Min_Age :</b>12</p>
+					<p><b>Avg_Duration :</b>30 minutes</p>
+					<p><b>Suggested_Players :</b>2-4 players</p>
+					<p><b>Brand :</b>Libellud</p>
+					<p><b>Price :</b>35€</p>
+					<p><b>Availability :</b>Available <?php echo $chosenN ?></p>
+					<a href= 'templates/addToCart.php?item=df' class='btn button_add_cart'></a>
+				</div>
+			</div>
+			<?php
+				$chosenN="";
+				if (isset($_COOKIE["cart_cookie_snt"])) {
+					$chosenN="<h2 class='chosen'> chosen ".$_COOKIE["cart_cookie_snt"]." times </h2>";
+				}
+			?>
+			<div class="row boardgame_detail">
+			<img src='img/santorini.jpg' class='cart_image'>
+				<div class='boardgame_details_container'>							
+					<p><b>Name :</b> Santorini </p> 
+					<p><b>Description :</b>Build like a Human, win like a God </p>
+					<p><b>Min_Age :</b>8</p>
+					<p><b>Avg_Duration :</b>20 minutes</p>
+					<p><b>Suggested_Players :</b>2-4 players</p>
+					<p><b>Brand :</b>Roxley Games</p>
+					<p><b>Price :</b>35€</p>
+					<p><b>Availability :</b>Available <?php echo $chosenN ?></p>
+					<a href= 'templates/addToCart.php?item=snt' class='btn button_add_cart'></a>
+				</div>
+			</div>
+		</div>
+		<div class='line'></div>
 	</div>
 </section>

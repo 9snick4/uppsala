@@ -2,22 +2,22 @@
 <html lang="en">
 
   <head>
-    <?php include 'includes/head.php';?>
+    <?php include '/includes/head.php';?>
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <?php include 'includes/navigation.php';?>
+    <?php include '/includes/navigation.php';?>
     
     <!-- Header -->
-    <?php include 'includes/header.php';?>
+    <?php include '/includes/header.php';?>
     
     <!-- Main -->
-    <?php include 'includes/main_index.php';?>
+    <?php include '/includes/main_gallery.php';?>
     
     <!-- Main -->
-    <?php include 'includes/footer.php';?>
+    <?php include '/includes/footer.php';?>
 
 
     <!-- Bootstrap core JavaScript -->

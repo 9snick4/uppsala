@@ -14,7 +14,7 @@
     <?php include 'includes/header.php';?>
     
     <!-- Main -->
-    <?php include 'includes/main_index.php';?>
+    <?php include 'includes/main_checkout.php';?>
     
     <!-- Main -->
     <?php include 'includes/footer.php';?>

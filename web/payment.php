@@ -14,9 +14,9 @@
     <?php include 'includes/header.php';?>
     
     <!-- Main -->
-    <?php include 'includes/main_index.php';?>
+    <?php include 'includes/main_payment.php';?>
     
-    <!-- Main -->
+    <!-- Footer -->
     <?php include 'includes/footer.php';?>
 
 

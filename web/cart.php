@@ -14,13 +14,13 @@
     <?php include 'includes/header.php';?>
     
     <!-- Main -->
-    <?php include 'includes/main_index.php';?>
+    <?php include 'includes/main_cart.php';?>
     
     <!-- Main -->
     <?php include 'includes/footer.php';?>
 
-
     <!-- Bootstrap core JavaScript -->
+    
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

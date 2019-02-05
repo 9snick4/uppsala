@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <?php include 'includes/head.php';?>
-  </head>
+<head>
+  <?php include 'includes/head.php';?>
+</head>
 
   <body>
 
@@ -14,11 +14,10 @@
     <?php include 'includes/header.php';?>
     
     <!-- Main -->
-    <?php include 'includes/main_index.php';?>
+    <?php include 'includes/main_checkout.php';?>
     
     <!-- Main -->
     <?php include 'includes/footer.php';?>
-
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
