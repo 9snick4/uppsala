@@ -1,5 +1,5 @@
 <?php
 
-  header("location: /uppsala/index.php");
+  header("location: /web/index.php");
 
 ?>
