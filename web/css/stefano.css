@@ -1,0 +1,177 @@
+.hide{display: none !important}
+
+div,span,h2,h3,h4,h5,h6{color:#333;}
+h1{color: #fff}
+h1+h2{ color: #fff }
+footer div{color: #fff}
+footer{padding:20px 0 10px 0; margin-top: 20px;}
+.padding_top{padding-top: 50px;}
+.cart_image{width: 200px; height: 80%; margin: auto;}
+.centered{ position: relative; left: 50%; transform: translateX(-50%); text-align: center;}
+.btn{margin: 10px;}
+label{margin-bottom: .1rem; padding:5px;}
+input{display: block; margin-bottom:0.5rem;}
+#profile_container a{ display: block; }
+#login_error{color: #d82929;}
+.nav-tabs li{padding: 5px;}
+.nav-tabs li a{
+	padding: 8px;
+	border-left: transparent 1px solid;
+	border-top: transparent 1px solid;
+	border-right: transparent 1px solid;
+	border-bottom: transparent 1px solid;
+}
+.bold{font-weight: bold;}
+.unavailable{opacity: 0.6;}
+.unavailable .button_add_cart{display: none;}
+.nav-tabs li a:hover{text-decoration: none;}
+
+#profile_tabs_container a.active{    
+	border-left: #dee2e6 1px solid;
+	border-top: #dee2e6 1px solid;
+	border-right: #dee2e6 1px solid;
+	border-bottom: #fff 1px solid;
+	color: #666;
+
+}
+.button_add_cart{
+	position: absolute;
+	right: 25px;
+	bottom: 40%;
+	background: url(../img/cart.png);
+	background-repeat: no-repeat !important;
+	height: 32px;
+	width: 32px;
+	background-size: contain !important;
+	opacity: 0;
+	-webkit-transition: box-shadow 0.2s ease-out;
+	-moz-transition: box-shadow 0.2s ease-out;
+	-ms-transition: box-shadow 0.2s ease-out;
+	-o-transition: box-shadow 0.2s ease-out;
+	transition: box-shadow 0.2s ease-out;
+
+}
+.button_add_cart:hover{
+	background: url(../img/cart_hover.png);
+}
+.button_remove_cart{
+	position: absolute;
+	right: 0px;
+	top: 8px;
+	background: url(../img/close.png);
+	background-repeat: no-repeat !important;
+	height: 32px;
+	width: 32px;
+	background-size: contain !important;
+	opacity: 0;
+	-webkit-transition: box-shadow 0.2s ease-out;
+	-moz-transition: box-shadow 0.2s ease-out;
+	-ms-transition: box-shadow 0.2s ease-out;
+	-o-transition: box-shadow 0.2s ease-out;
+	transition: box-shadow 0.2s ease-out;
+
+}
+
+.right_detail{
+	position: absolute;
+	left: 50%;
+}
+.button_remove_cart:hover{
+	background: url(../img/close_hover.png);
+}
+.boardgame_details_container{padding: 20px; width: 70%;}
+#cart_container .boardgame_detail{ 
+	position: relative;
+	height: 360px; 
+	margin-top: 30px;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+
+}
+#user_section .container, #cart_section .container{ width: 90%; }
+.current{background: #000; color: #EEE !important}
+#cart_container .boardgame_detail:hover{
+	-webkit-box-shadow: 1px 1px 20px 10px #011342;
+	box-shadow: 1px 1px 20px 10px #011342; }
+#cart_container .boardgame_detail:hover .button_add_cart{opacity: 1;}
+#cart_container .boardgame_detail:hover .button_remove_cart{opacity: 1;}
+.tab-content{padding: 10px;}
+.line{    
+	border-bottom: 1px solid #EAEAEA;
+    width: 100%;
+    top: -1px;
+    position: relative;
+}
+.nowrap{ white-space: nowrap; }
+.btn_confirm_purchase{
+	background:#2984e0;
+	font-weight: bold;
+	position: relative;
+	left: 50%;
+}
+#checkout_container{margin-top: 50px;}
+.p-25{padding: 25px;}
+.btn_confirm_purchase:hover{
+	background: #22af4e;
+}
+#countries{display: inline-block;}
+.chosen{position: absolute;bottom: 0px;right: 0px;}
+.my-gallery figure:nth-child(n+7) .gallery-image{display: none}
+.paddingtop{padding-top: 50px;}
+.full_height{height: 100% !important;}
+.row.summary:nth-child(even){background:#F0F5EA;}
+#billing_address,#billing_addr{
+	max-height: 0px;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	-ms-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+#billing_address.collapsed{max-height: 100%; opacity: 1; height: 120px;}
+#billing_addr.collapsed{max-height: 100%; opacity: 1; height: initial;}
+.checkout_img{ object-fit: fill;width: 90px;height: 90px;}
+#checkout_container .list-group-item{padding: 0.35rem 0.35rem;}
+#checkout_container .my-0{ position: absolute;top: 0.30rem; right: 0.30rem;}    
+#checkout_container .checkout_pricing{position: absolute; bottom: 0.35rem; right: 0.35rem;}
+
+@media (max-width: 991px){
+	#cart_container .boardgame_detail{ 
+		height: 370px;
+	}
+
+}
+@media (max-width: 767px){
+
+	.p-5{ padding: 2rem  2rem 0 !important;}
+	.p-5>h2{ font-size: 2.5rem;text-align: center;}
+	.p-5>p{ text-align: center; margin-top: 1rem;}
+	#cart_container .boardgame_detail{height: 430px;}
+	.boardgame_details_container{width: 60%;}  
+
+	
+}
+@media (max-width: 600px){
+	.boardgame_details_container{width: 100%; column-count: 2;}
+    #cart_container .boardgame_detail{height: 650px;}
+    #cart_container .line{display: none;}
+    #summary_container .row{ display: block; }
+    #summary_container{column-count: 1;}  
+	.cart_image{    
+		width: 80%;
+    	height: 300px;
+    	position: relative;
+    	margin:auto;
+    }
+    .button_add_cart{    
+    	right: 50%;
+    	bottom: 0;
+    	transform: translateX(50%);
+    }
+    .chosen{position: relative;}
+}
