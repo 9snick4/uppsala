@@ -13,8 +13,9 @@ CREATE TABLE City (
     CityName VARCHAR(58) NOT NULL,
     Latitude FLOAT NOT NULL,
     Longitude FLOAT NOT NULL,
-    Elevation FLOAT NOT NULL,
-    CityPopulation INT,
+    CityPopulation INT NOT NULL,
+	Extension FLOAT NOT NULL,
+	Elevation INT NOT NULL,
     CreatedOn TIMESTAMP NOT NULL,
     ModifiedOn TIMESTAMP NOT NULL,
     CreatedBy INT REFERENCES Gamer(GamerID) NOT NULL,
@@ -52,6 +53,4 @@ CREATE TABLE Game (
     CreatedBy INT REFERENCES Gamer(GamerID) NOT NULL,
     ModifiedBy INT REFERENCES Gamer(GamerID) NOT NULL
 );
-
-
 
