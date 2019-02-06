@@ -1,8 +1,6 @@
 .hide{display: none !important}
 
-div,span,h2,h3,h4,h5,h6{color:#333;}
-h1{color: #fff}
-h1+h2{ color: #fff }
+div,span,h1,h2,h3,h4,h5,h6{color:#333;}
 footer div{color: #fff}
 footer{padding:20px 0 10px 0; margin-top: 20px;}
 .padding_top{padding-top: 50px;}
