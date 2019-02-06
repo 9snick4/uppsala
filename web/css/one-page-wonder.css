@@ -65,6 +65,7 @@ header.masthead {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
+  color:black;
 }
 
 header.masthead .masthead-content {

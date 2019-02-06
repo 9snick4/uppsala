@@ -1,8 +1,8 @@
 <header class="masthead text-center text-white">
   <div class="masthead-content">
     <div class="container">
-      <h1 class="masthead-heading mb-0">Board Game Blog</h1>
-      <h2 class="masthead-subheading mb-0">Analog passion, digital content</h2>
+      <h1 class="masthead-heading mb-0">Bon Voyage</h1>
+      <h2 class="masthead-subheading mb-0">A geography bluffing game</h2>
       <!--<a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>-->
     </div>
   </div>
