@@ -7,10 +7,10 @@
 				Select the list to display
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="templates/query_list.php?table=m">Maps</a>
-				<a class="dropdown-item" href="templates/query_list.php?table=c">Cities</a>
-				<a class="dropdown-item" href="templates/query_list.php?table=g">Games</a>
-				<a class="dropdown-item" href="templates/query_list.php?table=u">Gamers</a>
+				<a class="dropdown-item" onclick="showAjaxList('m');">Maps</a>
+				<a class="dropdown-item" onclick="showAjaxList('c');">Cities</a>
+				<a class="dropdown-item" onclick="showAjaxList('g');">Games</a>
+				<a class="dropdown-item" onclick="showAjaxList('u');">Gamers</a>
 			</div>
 		</div>
 	</div>
