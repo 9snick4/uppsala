@@ -13,6 +13,7 @@
 				<a class="dropdown-item" onclick="showAjaxList('u');">Gamers</a>
 			</div>
 		</div>
+		<div id="table-placeholder"></div>
 	</div>
 </div>
 
