@@ -1,6 +1,6 @@
 function showAjaxList(t)
 {
-    $.get( "test.php", { table: t}).done(function(data) {
+    $.get( "templates/query_list.php", { table: t}).done(function(data) {
             alert(data);
     });
 }
