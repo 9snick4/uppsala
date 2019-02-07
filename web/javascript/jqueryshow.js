@@ -10,12 +10,12 @@ function showAjaxList(t)
             }
             table.append($('<tbody>'));
             for(i=0; i<result.length; i++) {
-                for (j = 0; i<columnNames.length; j++) {
+                for (j = 0; j<columnNames.length; j++) {
                     var row = $('<tr>').text(result[0][columnNames[j]]);
                     table.append(row);
                 }
             }
-            $('#table-placeholder').append(table);
+            $('#table-placeholder').html(table);
         });
         
         
