@@ -1,9 +1,10 @@
+
 <div class="container">
 	<div class="row align-items-center">
-		<h2 class="col-12">Select the list to display</h2>
+		<h2 class="col-12"></h2>
 		<div class="dropdown">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Dropdown button
+				Select the list to display
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 				<a class="dropdown-item" href="templates/query_list.php?table=m">Maps</a>
@@ -14,3 +15,5 @@
 		</div>
 	</div>
 </div>
+
+<script src="javascript/jqueryshow.js"></script>
