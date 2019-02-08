@@ -14,7 +14,7 @@ function showAjaxList(t)
             for(i=0; i<result.length; i++) {
                 var tr =$('<tr>').append($('<td>').text(i));
                 for (j = 0; j<columnNames.length; j++) {
-                    var row = $('<td>').text(result[0][columnNames[j]]);
+                    var row = $('<td>').text(result[i][columnNames[j]]);
                     tr.append(row);
                 }
                 tbody.append(tr);
