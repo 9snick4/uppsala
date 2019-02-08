@@ -10,7 +10,7 @@ function showAjaxList(t)
             }
             table.append($('<tbody>'));
             for(i=0; i<result.length; i++) {
-                table.append($('tr'));
+                table.append($('<tr>')).append($('<td>').text(i));
                 for (j = 0; j<columnNames.length; j++) {
                     var row = $('<td>').text(result[0][columnNames[j]]);
                     table.append(row);
