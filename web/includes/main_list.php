@@ -1,7 +1,9 @@
 
 <div class="container">
-	<div class="row justify-content-center">
-		<div class="row display-4">List of cities and maps</div>
+	<div class="justify-content-center">
+		<div class="row display-4">
+			List of cities and maps
+		</div>
 		<div class="row dropdown">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Select the list to display
@@ -13,7 +15,8 @@
 				<a class="dropdown-item" onclick="showAjaxList('u');">Gamers</a>
 			</div>
 		</div>
-		<div class="row" id="table-placeholder"></div>
+		<div class="row" id="table-placeholder">
+		</div>
 	</div>
 </div>
 
