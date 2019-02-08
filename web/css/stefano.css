@@ -19,6 +19,7 @@ input{display: block; margin-bottom:0.5rem;}
 	border-right: transparent 1px solid;
 	border-bottom: transparent 1px solid;
 }
+table tr:nth-child(odd){background :#fafaff}
 .bold{font-weight: bold;}
 .unavailable{opacity: 0.6;}
 .unavailable .button_add_cart{display: none;}
