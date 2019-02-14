@@ -17,7 +17,7 @@
 				$db = get_db();
 				foreach ($db->query("SELECT mapid, mapName FROM map ORDER BY mapname") as $row)
 				{
-					echo '<option value='.$row["mapid"].'>'.$row["mapName"].'</option>';
+					echo '<option value='.$row["mapid"].'>'.$row["mapname"].'</option>';
 				}
 			?>
 		</select>
