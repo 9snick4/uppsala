@@ -25,3 +25,24 @@ function showAjaxList(t)
         
         
 }
+
+function showForm(t)
+{
+    var form = "";
+    switch (t) {
+        case 'm':
+        form = 'includes\city_form.php';
+        break;
+        case 'c':
+        form = 'includes\city_form.php';
+        break;
+        case 'm':
+        form = 'includes\city_form.php';
+        break;
+        case 'a':
+        form = 'includes\city_form.php';
+        break;
+    }
+    $('#form-placeholder').load(form);       
+        
+}
