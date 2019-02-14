@@ -1,4 +1,4 @@
-<form metod="POST" action="templates\InsertDB.php" class="needs-validation" novalidate>
+<form metod="POST" action="templates\InsertDB.php" class="needs-validation">
 	<div class="form-group">
 		<label for="city-textfield">City Name</label>
 		<input type="text" class="form-control" id="city-textfield" placeholder="City" requried>
@@ -30,6 +30,7 @@
 		<div class="invalid-feedback">
 			Elevation is required.
 		</div>
+        <input type="text" class="d-none" id="form-id" value="c">
 		<button class="btn btn-primary" type="submit">Submit</button>
 	</div>
 </form>

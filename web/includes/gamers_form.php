@@ -1,10 +1,11 @@
-<form metod="POST" action="templates\InsertDB.php" class="needs-validation" novalidate>
+<form metod="POST" action="templates\InsertDB.php" class="needs-validation">
 	<div class="form-group">
 		<label for="gamer-textfield">Gamer Name</label>
-		<input type="text" class="form-control" id="gamer-textfield" placeholder="City" requried>
+		<input type="text" class="form-control" id="gamer-textfield" placeholder="Name" requried>
 		<div class="invalid-feedback">
 			Gamer is required.
 		</div>
+		<input type="text" class="d-none" id="form-id" value="g">
 		<button class="btn btn-primary" type="submit">Submit</button>
 	</div>
 </form>
