@@ -31,12 +31,12 @@ function showForm(t)
     var form = "";
     switch (t) {
         case 'm':
-        form = 'includes/city_form.php';
+        form = 'includes/map_form.php';
         break;
         case 'c':
         form = 'includes/city_form.php';
         break;
-        case 'm':
+        case 'g':
         form = 'includes/city_form.php';
         break;
         case 'a':
