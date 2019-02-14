@@ -37,10 +37,10 @@ function showForm(t)
         form = 'includes/city_form.php';
         break;
         case 'g':
-        form = 'includes/city_form.php';
+        form = 'includes/gamers_form.php';
         break;
         case 'a':
-        form = 'includes/city_form.php';
+        form = 'includes/city_map_form.php';
         break;
     }
     $('#form-placeholder').load(form);       
