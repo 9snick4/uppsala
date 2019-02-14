@@ -19,7 +19,7 @@
           <a class="nav-link btn btn-secondary rounded-pill" href="list.php">Show</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-secondary rounded-pill" href="Add.php">Add</a>
+          <a class="nav-link btn btn-secondary rounded-pill" href="add.php">Add</a>
         </li>
       </ul>
     </div>
