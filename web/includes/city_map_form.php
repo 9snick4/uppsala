@@ -1,9 +1,27 @@
 <form metod="POST" action="templates\InsertDB.php" class="needs-validation">
 	<div class="form-group">
 		<label for="city-textfield">City Name</label>
-
-		<label for="elevation-textfield">Elevation</label>
-
+		<select class="custom-select" size="3" id="city-textfield">
+			<?php
+				require("dbConnect.php");
+				$db = get_db();
+				foreach ($db->query("SELECT cityid, cityName FROM city ORDER BY cityname") as $row)
+				{
+					echo '<option value='.$row["cityid"].'>'.$row["cityname"].'</option>';
+				}
+			?>
+		</select>
+		<label for="city-textfield">City Name</label>
+		<select class="custom-select" size="3" id="city-textfield">
+			<?php
+				require("dbConnect.php");
+				$db = get_db();
+				foreach ($db->query("SELECT mapid, mapName FROM map ORDER BY mapname") as $row)
+				{
+					echo '<option value='.$row["mapid"].'>'.$row["mapName"].'</option>';
+				}
+			?>
+		</select>
 		<input type="text" class="d-none" id="form-id" value="a">
 		<button class="btn btn-primary" type="submit">Submit</button>
 	</div>
