@@ -50,6 +50,7 @@ function showAjaxList(t)
                     var modal = $(this);
                     var found = modal.find('#row-id');
                     found.val(id);
+                    alert(found.val());
                 });
         });
         
