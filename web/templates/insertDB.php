@@ -9,7 +9,7 @@
             case 'c':
                 $query = "INSERT INTO City 
                 (CityName, Latitude, Longitude,CityPopulation, Extension, Elevation, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
-                VALUES(:CityName, :Latitude, :Longitude,:CityPopulation :Extension, :Elevation,NOW(),NOW(),1, 1)";
+                VALUES(:CityName, :Latitude, :Longitude,:CityPopulation, :Extension, :Elevation,NOW(),NOW(),1, 1)";
                 $statement = $db->prepare($query);
                 $statement->bindValue(':CityName', $_POST["city-textfield"]);
                 $statement->bindValue(':Latitude', $_POST["latitude-textfield"]);
