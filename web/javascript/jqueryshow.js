@@ -48,7 +48,7 @@ function showForm(t)
 }
 
 
-function postData(){        
+function postForm(){        
     $.post("insertDB.php", $("#reg-form").serialize(), function(data) {
         alert(data);
     });
