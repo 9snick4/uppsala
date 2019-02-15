@@ -7,41 +7,24 @@
         switch($_POST["form-id"])
         {
             case 'c':
-                $query = "INSERT INTO City 
-                (CityName, Latitude, Longitude,CityPopulation, Extension, Elevation, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
-                VALUES(:CityName, :Latitude, :Longitude,:CityPopulation, :Extension, :Elevation,NOW(),NOW(),1, 1)";
+                $query = "DELETE FROM City 
+                WHERE cityID = :cityID";
                 $statement = $db->prepare($query);
-                $statement->bindValue(':CityName', $_POST["city-textfield"]);
-                $statement->bindValue(':Latitude', $_POST["latitude-textfield"]);
-                $statement->bindValue(':Longitude', $_POST["longitude-textfield"]);
-                $statement->bindValue(':CityPopulation', $_POST["population-textfield"]);
-                $statement->bindValue(':Extension', $_POST["extension-textfield"]);
-                $statement->bindValue(':Elevation', $_POST["elevation-textfield"]);
-                $statement->execute();
-            break;
-            case 'a':
-                $query = "INSERT INTO MapCity
-                (MapID, CityID, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
-                VALUES(:MapID, :CityID, NOW(),NOW(),1, 1)";
-                $statement = $db->prepare($query);
-                $statement->bindValue(':MapID', $_POST["map-select"]);
-                $statement->bindValue(':CityID', $_POST["city-select"]);
+                $statement->bindValue(':cityID', $_POST["row-id"]);
                 $statement->execute();
             break;
             case 'g':
-                $query = "INSERT INTO Gamer 
-                (GamerName, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
-                VALUES(:GamerName, NOW(),NOW(),1, 1)";
+                $query = "DELETE FROM Gamer 
+                WHERE gamerID = :gamerID";
                 $statement = $db->prepare($query);
-                $statement->bindValue(':GamerName', $_POST["gamer-textfield"]);
+                $statement->bindValue(':gamerID', $_POST["row-id"]);
                 $statement->execute();
             break;
             case 'm':
-                $query = "INSERT INTO Map 
-                (MapName, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
-                VALUES(:MapName, NOW(),NOW(),1, 1)";
+                $query = "DELETE FROM Map 
+                WHERE MapID = :mapID";
                 $statement = $db->prepare($query);
-                $statement->bindValue(':MapName', $_POST["map-textfield"]);
+                $statement->bindValue(':mapID', $_POST["row-id"]);
                 $statement->execute();
             break;
             default;
