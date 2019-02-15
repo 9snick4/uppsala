@@ -49,7 +49,7 @@ function showForm(t)
 
 
 function postForm(){        
-    $.post("insertDB.php", $("#reg-form").serialize(), function(data) {
+    $.post("templates/insertDB.php", $("#reg-form").serialize(), function(data) {
         alert(data);
     });
 }
