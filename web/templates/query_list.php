@@ -12,7 +12,7 @@ try
     break;
   case 'c':
     $stmt = $db->prepare('SELECT city.cityid, cityname AS City,Latitude,Longitude,Elevation,citypopulation AS Population,mapname AS Map 
-                          FROM city INNER JOIN mapcity ON city.cityid = mapcity.cityid INNER JOIN map ON mapcity.mapid = map.mapid
+                          FROM city LEFT OUTER JOIN mapcity ON city.cityid = mapcity.cityid INNER JOIN map ON mapcity.mapid = map.mapid
                           ORDER BY cityname, mapname');
     break;
   case 'g':

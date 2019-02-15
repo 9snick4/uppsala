@@ -13,10 +13,7 @@
           <a class="nav-link btn btn-secondary rounded-pill" href="newgame.php">Play</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-secondary rounded-pill" href="profile.php">Edit</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn btn-secondary rounded-pill" href="list.php">Show</a>
+          <a class="nav-link btn btn-secondary rounded-pill" href="list.php">Edit</a>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-secondary rounded-pill" href="add.php">Add</a>
