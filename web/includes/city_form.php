@@ -6,12 +6,12 @@
 			City is required.
 		</div>
 		<label for="latitude-textfield">Latitude</label>
-		<input type="number" class="form-control" id="latitude-textfield" placeholder="Latitude" requried>
+		<input type="number" step="0.01" class="form-control" id="latitude-textfield" placeholder="Latitude" requried>
 		<div class="invalid-feedback">
 			Latitude is required.
 		</div>
 		<label for="longitude-textfield">Longitude</label>
-		<input type="number" class="form-control" id="longitude-textfield" placeholder="Longitude" requried>
+		<input type="number" step="0.01" class="form-control" id="longitude-textfield" placeholder="Longitude" requried>
 		<div class="invalid-feedback">
 			Longitude is required.
 		</div>
