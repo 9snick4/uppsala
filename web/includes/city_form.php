@@ -30,7 +30,7 @@
 		<div class="invalid-feedback">
 			Elevation is required.
 		</div>
-        <input type="text" class="d-none" id="form-id" value="c">
+        <input type="text" class="d-none" name="form-id" id="form-id" value="c">
 		<button class="btn btn-primary" type="submit" id="form-btn" onclick="postForm()">Submit</button>
 	</div>
 </form>
