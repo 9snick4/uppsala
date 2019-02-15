@@ -1,4 +1,4 @@
-<form metod="POST" action="templates\InsertDB.php" class="needs-validation">
+<form id="reg-form" class="needs-validation">
 	<div class="form-group">
 		<label for="gamer-textfield">Gamer Name</label>
 		<input type="text" class="form-control" name="gamer-textfield" id="gamer-textfield" placeholder="Name" requried>
