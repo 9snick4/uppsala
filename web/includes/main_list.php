@@ -43,7 +43,7 @@
 					Map is required.
 				</div>
 				<input type="text" class="d-none" name="form-id" id="form-id" value="m">
-				<input type="text" class="d-none" name="map-id" id="row-id" value="">
+				<input type="text" class="d-none" name="row-id" id="row-id" value="">
 			</div>
 		</form>
       </div>
@@ -78,7 +78,7 @@
 					Gamer is required.
 				</div>
 				<input type="text" class="d-none" name="form-id" id="form-id" value="g">
-				<input type="text" class="d-none" name="gamer-id" id="row-id"  value="">
+				<input type="text" class="d-none" name="row-id" id="row-id"  value="">
 			</div>
 		</form>
       </div>
@@ -138,7 +138,7 @@
 					Elevation is required.
 				</div>
 				<input type="text" class="d-none" name="form-id" id="form-id" value="c">
-				<input type="text" class="d-none" name="city-id" id="row-id" value="">
+				<input type="text" class="d-none" name="row-id" id="row-id" value="">
 			</div>
 		</form>
       </div>
