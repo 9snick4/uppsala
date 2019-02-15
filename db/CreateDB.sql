@@ -10,7 +10,7 @@ CREATE TABLE Gamer (
 
 CREATE TABLE City (
     CityID SERIAL PRIMARY KEY NOT NULL,
-    CityName VARCHAR(58) NOT NULL,
+    CityName VARCHAR(58) NOT NULL UNIQUE,
     Latitude FLOAT NOT NULL,
     Longitude FLOAT NOT NULL,
     CityPopulation INT NOT NULL,
@@ -38,7 +38,8 @@ CREATE TABLE MapCity (
     CreatedOn TIMESTAMP NOT NULL,
     ModifiedOn TIMESTAMP NOT NULL,
     CreatedBy INT REFERENCES Gamer(GamerID) NOT NULL,
-    ModifiedBy INT REFERENCES Gamer(GamerID) NOT NULL
+    ModifiedBy INT REFERENCES Gamer(GamerID) NOT NULL,
+    CONSTRAINT unique_map_city UNIQUE (CityID, MapID)
 );
 
 CREATE TABLE Game (

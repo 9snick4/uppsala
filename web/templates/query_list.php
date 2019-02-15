@@ -5,7 +5,7 @@ try
   $db = get_db();
 
   $stmt = "";
-  switch ($table)
+  switch ($_POST["table"])
   {
   case 'm':
     $stmt = $db->prepare('SELECT mapname FROM map ORDER BY mapname');

@@ -44,6 +44,8 @@
                 $statement->bindValue(':MapName', $_POST["map-textfield"]);
                 $statement->execute();
             break;
+            default;
+                echo "Input error";
         }
         
     }
@@ -52,5 +54,5 @@
         echo "Error with DB. Details: $ex";
         die();
     }
-    echo "success!";  
+    echo "Success!";  
 ?>
