@@ -3,7 +3,7 @@ function showAjaxList(t)
     $.get( "templates/query_list.php", { table: t}).done(function(data) {
             var result = JSON.parse(data);
             var columnNames = Object.keys(result[0]);   
-            var table = $('<table>').addClass('table').addClass('table-hover').addClass('table-responsive'); //.append($('<thead>')).append($('<th>'));
+            var table = $('<table>').addClass('table').addClass('table-hover').addClass('table-responsive'); 
             var thead = $('<thead>').append($('<th>'));
             var modalName = "";
             switch (t)
@@ -35,13 +35,21 @@ function showAjaxList(t)
                     tr.append(row);
                 }
                 if (modalName !== "") {
-                  tr.append($('<td>').html(modalbutton));
-                  modalbutton = $('<button>').attr("type","button").attr("data-toggle","modal").attr("data-target",modalName).addClass("btn").addClass("btn-primary").val("Edit");
+                    modalbutton.attr("data-id", result[i][0]);
+                    tr.append($('<td>').html(modalbutton));
+                    modalbutton = $('<button>').attr("type","button").attr("data-toggle","modal").attr("data-target",modalName).addClass("btn").addClass("btn-primary").val("Edit");
                 }
                 tbody.append(tr);
             }
             table.append(tbody);
             $('#table-placeholder').html(table);
+            if (modalName !== "")
+                $(modalName).on('show.bs.modal', function (event) {
+                    var button = $(event.relatedTarget); // Button that triggered the modal
+                    var id = button.data('id'); // Extract info from data-id attribute
+                    var modal = $(this);
+                    modal.find('.id').text(id);
+                });
         });
         
         

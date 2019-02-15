@@ -43,7 +43,7 @@
 					Map is required.
 				</div>
 				<input type="text" class="d-none" name="form-id" id="form-id" value="m">
-				<input type="text" class="d-none" name="map-id" id="map-id" value="">
+				<input type="text" class="d-none" name="map-id" id="map-id" class="id" value="">
 			</div>
 		</form>
       </div>
@@ -58,7 +58,7 @@
 </div>
 
 <!-- gamer-modal -->
-<div class="modal fade" id="map-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="gamer-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <!--Header-->
@@ -78,7 +78,7 @@
 					Gamer is required.
 				</div>
 				<input type="text" class="d-none" name="form-id" id="form-id" value="g">
-				<input type="text" class="d-none" name="gamer-id" id="gamer-id" value="">
+				<input type="text" class="d-none" name="gamer-id" id="gamer-id" class="id" value="">
 			</div>
 		</form>
       </div>
@@ -93,7 +93,7 @@
 </div>
 
 <!-- city-modal -->
-<div class="modal fade" id="map-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="city-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <!--Header-->
@@ -138,7 +138,7 @@
 					Elevation is required.
 				</div>
 				<input type="text" class="d-none" name="form-id" id="form-id" value="c">
-				<input type="text" class="d-none" name="city-id" id="city-id" value="">
+				<input type="text" class="d-none" name="city-id" id="city-id" class="id" value="">
 			</div>
 		</form>
       </div>
