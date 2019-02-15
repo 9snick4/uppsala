@@ -41,20 +41,11 @@
             break;
         }
         
-    }  
+    }
+    echo "success!";  
     catch (Exception $ex)
     {
         echo "Error with DB. Details: $ex";
         die();
     }
 ?>
-
-CityName VARCHAR(58) NOT NULL,
-    Latitude FLOAT NOT NULL,
-    Longitude FLOAT NOT NULL,
-    CityPopulation INT NOT NULL,
-	Extension FLOAT NOT NULL,
-	Elevation INT NOT NULL,   CreatedOn TIMESTAMP NOT NULL,
-    ModifiedOn TIMESTAMP NOT NULL,
-    CreatedBy INT REFERENCES Gamer(GamerID) NOT NULL,
-    ModifiedBy INT REFERENCES Gamer(GamerID) NOT NULL

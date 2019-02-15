@@ -46,3 +46,9 @@ function showForm(t)
     $('#form-placeholder').load(form);       
         
 }
+
+$("#form-btn").click(function(){        
+    $.post("insertDB.php", $("#reg-form").serialize(), function(data) {
+        alert(data);
+    });
+});

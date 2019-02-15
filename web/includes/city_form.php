@@ -1,4 +1,4 @@
-<form metod="POST" action="templates\InsertDB.php" class="needs-validation">
+<form class="needs-validation" id="reg-form">
 	<div class="form-group">
 		<label for="city-textfield">City Name</label>
 		<input type="text" class="form-control" id="city-textfield" placeholder="City" requried>
@@ -31,13 +31,13 @@
 			Elevation is required.
 		</div>
         <input type="text" class="d-none" id="form-id" value="c">
-		<button class="btn btn-primary" type="submit">Submit</button>
+		<button class="btn btn-primary" type="submit" id="form-btn">Submit</button>
 	</div>
 </form>
 
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
+$(function() {
   'use strict';
   window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -53,5 +53,5 @@
       }, false);
     });
   }, false);
-})();
+});
 </script>
