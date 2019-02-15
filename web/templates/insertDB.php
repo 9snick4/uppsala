@@ -42,10 +42,10 @@
         }
         
     }
-    echo "success!";  
     catch (Exception $ex)
     {
         echo "Error with DB. Details: $ex";
         die();
     }
+    echo "success!";  
 ?>
