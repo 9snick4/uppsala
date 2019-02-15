@@ -48,7 +48,7 @@ function showAjaxList(t)
                     var button = $(event.relatedTarget); // Button that triggered the modal
                     var id = button.data('id'); // Extract info from data-id attribute
                     var modal = $(this);
-                    modal.find('.id').text(id);
+                    modal.find('.id').val(id);
                 });
         });
         
