@@ -5,7 +5,7 @@
 		<div class="invalid-feedback">
 			Map is required.
 		</div>
-		<input type="text" class="d-none" name="map-textfield" id="form-id" value="m">
+		<input type="text" class="d-none" name="form-id" id="form-id" value="m">
 		<button class="btn btn-primary" onclick="postForm()" type="submit">Submit</button>
 	</div>
 </form>
