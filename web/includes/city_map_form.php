@@ -22,6 +22,6 @@
 			?>
 		</select>
 		<input type="text" class="d-none" name="form-id" id="form-id" value="a">
-		<button class="btn btn-primary" type="submit" onclick="postForm()">Submit</button>
+		<button class="btn btn-primary" type="button" onclick="postForm()">Submit</button>
 	</div>
 </form>

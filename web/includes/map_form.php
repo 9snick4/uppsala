@@ -6,7 +6,7 @@
 			Map is required.
 		</div>
 		<input type="text" class="d-none" name="form-id" id="form-id" value="m">
-		<button class="btn btn-primary" onclick="postForm()" type="submit">Submit</button>
+		<button class="btn btn-primary" onclick="postForm()" type="button">Submit</button>
 	</div>
 </form>
 

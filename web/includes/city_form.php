@@ -31,7 +31,7 @@
 			Elevation is required.
 		</div>
         <input type="text" class="d-none" name="form-id" id="form-id" value="c">
-		<button class="btn btn-primary" type="submit" id="form-btn" onclick="postForm()">Submit</button>
+		<button class="btn btn-primary" type="button" id="form-btn" onclick="postForm()">Submit</button>
 	</div>
 </form>
 
