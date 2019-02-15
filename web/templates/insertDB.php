@@ -19,13 +19,13 @@
                 $statement->bindValue(':Elevation', $_POST["elevation-textfield"]);
                 $statement->execute();
             break;
-            case 'm':
+            case 'a':
                 $query = "INSERT INTO MapCity
-                (MapID, GameID, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
-                VALUES(:MapID, :GameID, NOW(),NOW(),1, 1)";
+                (MapID, CityID, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
+                VALUES(:MapID, :CityID, NOW(),NOW(),1, 1)";
                 $statement = $db->prepare($query);
                 $statement->bindValue(':MapID', $_POST["map-select"]);
-                $statement->bindValue(':GameID', $_POST["game-select"]);
+                $statement->bindValue(':CityID', $_POST["city-select"]);
                 $statement->execute();
             break;
             case 'g':
@@ -36,7 +36,7 @@
                 $statement->bindValue(':GamerName', $_POST["gamer-textfield"]);
                 $statement->execute();
             break;
-            case 'a':
+            case 'm':
                 $query = "INSERT INTO Map 
                 (MapName, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
                 VALUES(:MapName, NOW(),NOW(),1, 1)";
