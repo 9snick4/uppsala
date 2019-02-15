@@ -10,6 +10,7 @@
                 $query = "INSERT INTO City 
                 (CityName, Latitude, Longitude,CityPopulation, Extension, Elevation, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
                 VALUES(:CityName, :Latitude, :Longitude, :Extension, :Elevation,NOW(),NOW(),1, 1)";
+                $statement = $db->prepare($query);
                 $statement->bindValue(':CityName', $_POST["city-textfield"]);
                 $statement->bindValue(':Latitude', $_POST["latitude-textfield"]);
                 $statement->bindValue(':Longitude', $_POST["longitude-textfield"]);
@@ -22,6 +23,7 @@
                 $query = "INSERT INTO MapCity
                 (MapID, GameID, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
                 VALUES(:MapName, NOW(),NOW(),1, 1)";
+                $statement = $db->prepare($query);
                 $statement->bindValue(':MapName', $_POST["map-textfield"]);
                 $statement->execute();
             break;
@@ -29,6 +31,7 @@
                 $query = "INSERT INTO Gamer 
                 (GamerName, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
                 VALUES(:GamerName, NOW(),NOW(),1, 1)";
+                $statement = $db->prepare($query);
                 $statement->bindValue(':GamerName', $_POST["gamer-textfield"]);
                 $statement->execute();
             break;
@@ -36,6 +39,7 @@
                 $query = "INSERT INTO Map 
                 (MapName, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
                 VALUES(:MapName, NOW(),NOW(),1, 1)";
+                $statement = $db->prepare($query);
                 $statement->bindValue(':MapName', $_POST["map-textfield"]);
                 $statement->execute();
             break;
