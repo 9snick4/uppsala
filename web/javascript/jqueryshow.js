@@ -24,7 +24,8 @@ function showAjaxList(t)
                 var col = $('<th>').attr("scope","col").text(columnNames[i]).css('textTransform', 'capitalize');
                 thead.append(col);
             }
-            thead.append($('<th>').attr("scope","col").text("Edit"));
+            if (modalName !== "")
+                thead.append($('<th>').attr("scope","col").text("Edit"));
             table.append(thead);
             var tbody = $('<tbody>') 
             for(i=0; i<result.length; i++) {
