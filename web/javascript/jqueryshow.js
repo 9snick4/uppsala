@@ -83,14 +83,14 @@ function postForm(){
     });
 }
 
-function postUpdate(){        
-    $.post("templates/updateDB.php", $("#reg-form").serialize(), function(data) {
+function postUpdate(form){        
+    $.post("templates/updateDB.php", $(form).serialize(), function(data) {
         alert(data);
     });
 }
 
-function postDelete() {        
-    $.post("templates/deleteDB.php", $("#reg-form").serialize(), function(data) {
+function postDelete(form) {        
+    $.post("templates/deleteDB.php", $(form).serialize(), function(data) {
         alert(data);
     });
 }

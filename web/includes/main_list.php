@@ -35,7 +35,7 @@
       </div>
       <!--Body-->
       <div class="modal-body">
-		<form id="reg-form" class="needs-validation">
+		<form id="reg-form-map" class="needs-validation">
 			<div class="form-group">
 				<label for="map-textfield">Map Name</label>
 				<input type="text" class="Map-control" name="map-textfield" id="map-textfield" placeholder="Map" requried>
@@ -50,8 +50,8 @@
       <!--Footer-->
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary" onclick="postUpdate();">Edit</button>
-		<button class="btn btn-secondary" onclick="postDelete();">DELETE</button>
+        <button class="btn btn-primary" onclick="postUpdate('#reg-form-map');">Edit</button>
+		<button class="btn btn-secondary" onclick="postDelete('#reg-form-map');">DELETE</button>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@
       </div>
       <!--Body-->
       <div class="modal-body">
-		<form id="reg-form" class="needs-validation">
+		<form id="reg-form-gamer" class="needs-validation">
 			<div class="form-group">
 				<label for="gamer-textfield">Gamer Name</label>
 				<input type="text" class="form-control" name="gamer-textfield" id="gamer-textfield" placeholder="Name" requried>
@@ -85,8 +85,8 @@
       <!--Footer-->
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary" onclick="postUpdate();">Edit</button>
-		<button class="btn btn-secondary" onclick="postDelete();">DELETE</button>
+        <button class="btn btn-primary" onclick="postUpdate('#reg-form-gamer');">Edit</button>
+		<button class="btn btn-secondary" onclick="postDelete('#reg-form-gamer');">DELETE</button>
       </div>
     </div>
   </div>
@@ -105,7 +105,7 @@
       </div>
       <!--Body-->
       <div class="modal-body">
-		<form class="needs-validation" id="reg-form">
+		<form class="needs-validation" id="reg-form-city">
 			<div class="form-group">
 				<label for="city-textfield">City Name</label>
 				<input type="text" class="form-control" id="city-textfield" name="city-textfield" placeholder="City" requried>
@@ -145,8 +145,8 @@
       <!--Footer-->
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary" onclick="postUpdate();">Edit</button>
-		<button class="btn btn-secondary" onclick="postDelete();">DELETE</button>
+        <button class="btn btn-primary" onclick="postUpdate('#reg-form-city');">Edit</button>
+		<button class="btn btn-secondary" onclick="postDelete('#reg-form-city');">DELETE</button>
       </div>
     </div>
   </div>
