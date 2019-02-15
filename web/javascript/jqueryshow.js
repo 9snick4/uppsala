@@ -47,10 +47,9 @@ function showForm(t)
         
 }
 
-$( function() {
-    $("#form-btn").click(function(){        
-        $.post("insertDB.php", $("#reg-form").serialize(), function(data) {
-            alert(data);
-        });
+
+function postData(){        
+    $.post("insertDB.php", $("#reg-form").serialize(), function(data) {
+        alert(data);
     });
-});
+}
