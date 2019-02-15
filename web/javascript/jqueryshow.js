@@ -5,10 +5,28 @@ function showAjaxList(t)
             var columnNames = Object.keys(result[0]);   
             var table = $('<table>').addClass('table').addClass('table-hover').addClass('table-responsive'); //.append($('<thead>')).append($('<th>'));
             var thead = $('<thead>').append($('<th>'));
+            var modalName = "";
+            switch (t)
+            {
+               case 'c':
+               modalName="#city-modal";
+               break;
+               case 'a':
+               modalName="#city-map-modal";
+               break;
+               case 'g':
+               modalName="#gamer-modal";
+               break;
+               case 'm':
+               modalName="#map-modal";
+               break; 
+            }
+            var modalbutton = $('<button>').attr("type","button").attr("data-toggle","modal").attr("data-target",modalName).addClass("btn").addClass("btn-primary").val("Edit");
             for(i=0; i<columnNames.length; i++){
                 var col = $('<th>').attr("scope","col").text(columnNames[i]).css('textTransform', 'capitalize');
                 thead.append(col);
             }
+            thead.append($('<th>').attr("scope","col").text("Edit"));
             table.append(thead);
             var tbody = $('<tbody>') 
             for(i=0; i<result.length; i++) {
@@ -17,6 +35,7 @@ function showAjaxList(t)
                     var row = $('<td>').text(result[i][columnNames[j]]);
                     tr.append(row);
                 }
+                tr.append($('<td>').html(modalbutton))
                 tbody.append(tr);
             }
             table.append(tbody);
