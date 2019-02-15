@@ -35,7 +35,7 @@ function showAjaxList(t)
                     tr.append(row);
                 }
                 if (modalName !== "") {
-                    modalbutton.attr("data-id", result[i][0]);
+                    modalbutton.attr("data-id", result[i][columnNames[0]]);
                     tr.append($('<td>').html(modalbutton));
                     modalbutton = $('<button>').attr("type","button").attr("data-toggle","modal").attr("data-target",modalName).addClass("btn").addClass("btn-primary").val("Edit");
                 }
