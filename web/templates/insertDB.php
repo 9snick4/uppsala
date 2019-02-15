@@ -22,9 +22,10 @@
             case 'm':
                 $query = "INSERT INTO MapCity
                 (MapID, GameID, CreatedOn,ModifiedOn,CreatedBy,ModifiedBy) 
-                VALUES(:MapName, NOW(),NOW(),1, 1)";
+                VALUES(:MapID, :GameID, NOW(),NOW(),1, 1)";
                 $statement = $db->prepare($query);
-                $statement->bindValue(':MapName', $_POST["map-textfield"]);
+                $statement->bindValue(':MapID', $_POST["map-select"]);
+                $statement->bindValue(':GameID', $_POST["game-select"]);
                 $statement->execute();
             break;
             case 'g':
