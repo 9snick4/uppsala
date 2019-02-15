@@ -49,9 +49,9 @@
       </div>
       <!--Footer-->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary">Edit</button>
-		<button class="btn btn-secondary">DELETE</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary" onclick="postUpdate();">Edit</button>
+		<button class="btn btn-secondary" onclick="postDelete();">DELETE</button>
       </div>
     </div>
   </div>
@@ -84,9 +84,9 @@
       </div>
       <!--Footer-->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary">Edit</button>
-		<button class="btn btn-secondary">DELETE</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary" onclick="postUpdate();">Edit</button>
+		<button class="btn btn-secondary" onclick="postDelete();">DELETE</button>
       </div>
     </div>
   </div>
@@ -144,9 +144,9 @@
       </div>
       <!--Footer-->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary">Edit</button>
-		<button class="btn btn-secondary">DELETE</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary" onclick="postUpdate();">Edit</button>
+		<button class="btn btn-secondary" onclick="postDelete();">DELETE</button>
       </div>
     </div>
   </div>

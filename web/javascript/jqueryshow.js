@@ -48,9 +48,7 @@ function showAjaxList(t)
                     var button = $(event.relatedTarget); // Button that triggered the modal
                     var id = button.data('id'); // Extract info from data-id attribute
                     var modal = $(this);
-                    var found = modal.find('#row-id');
-                    found.val(id);
-                    alert(found.val());
+                    modal.find('#row-id').val(id);
                 });
         });
         
@@ -81,6 +79,18 @@ function showForm(t)
 
 function postForm(){        
     $.post("templates/insertDB.php", $("#reg-form").serialize(), function(data) {
+        alert(data);
+    });
+}
+
+function postUpdate(){        
+    $.post("templates/updateDB.php", $("#reg-form").serialize(), function(data) {
+        alert(data);
+    });
+}
+
+function postDelete() {        
+    $.post("templates/deleteDB.php", $("#reg-form").serialize(), function(data) {
         alert(data);
     });
 }
