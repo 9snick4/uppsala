@@ -3,7 +3,7 @@
 	{
 		require("templates/dbConnect.php");
 		$db = get_db();
-		$_SESSION["gameid"]=$db->query("SELECT MAX(gameid) FROM game");
+		$_SESSION["gameid"]=$db->query("SELECT nextval('game_gameid_seq')");
 		echo $_SESSION["gameid"];
 	}
 
