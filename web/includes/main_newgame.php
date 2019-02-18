@@ -26,7 +26,6 @@
 						}
 					?>
 				</select>
-				<input type="text" class="d-none" name="form-id" id="form-id" value="a">
 				<button class="btn btn-primary" type="submit">Let's play!</button>
 			</div>
 		</form>
