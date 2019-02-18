@@ -10,9 +10,9 @@
 					<?php
 						require("templates/dbConnect.php");
 						$db = get_db();
-						foreach ($db->query("SELECT gamerid, gamername FROM name ORDER BY gamername") as $row)
+						foreach ($db->query("SELECT gamerid, gamername FROM gamer ORDER BY gamername") as $row)
 						{
-							echo '<option value='.$row["cityid"].'>'.$row["cityname"].'</option>';
+							echo '<option value='.$row["gamerid"].'>'.$row["gamername"].'</option>';
 						}
 					?>
 				</select>
