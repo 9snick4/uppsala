@@ -1,5 +1,5 @@
 <?php
-	if(isset($_SESSION["gameid"])
+	if(isset($_SESSION["gameid"]))
 	{
 		require("templates/dbConnect.php");
 		$db = get_db();
