@@ -1,5 +1,5 @@
 <?php
-	require("phpobjects/city.php")
+	require("phpobjects/city.php");
 	$citiesDeck = array();
 	if(!isset($_SESSION["gameid"]))
 	{
