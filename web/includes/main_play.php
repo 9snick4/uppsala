@@ -1,3 +1,5 @@
+<script src="javascript/bonvoyage.js"> </script>
+<div id="board-placeholder"></div>
 <?php
 
 
@@ -17,15 +19,17 @@
 		{
 			$city = new City($row["cityid"], $row["cityname"], $row["latitude"],$row["longitude"],$row["citypopulation"],$row["Extension"], $row["Elevation"]);
 			array_push($citiesDeck, $city);
-			
-			
 		}
 	//}
 ?>
 
 <script>
-
+//beginning setup
 var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
 var citiesDeck = JSON.parse(stringCitiesDeck);
+var board = $('#board-placeholder');
+var center = citiesDeck.pop();
+var longitudeCities = [center];
+var latitudeCities = [center];
 
 </script>
