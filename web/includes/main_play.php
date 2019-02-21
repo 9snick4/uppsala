@@ -13,8 +13,10 @@
 		$db = get_db();
 		foreach ($db->query("SELECT city.cityid, cityname,latitude,longitude,citypopulation,Extension,Elevation FROM city ORDER BY random() LIMIT 15") as $row)
 		{
-			array_push($citiesDeck, new City ( $row[0], $row[1], $row[2],$row[3],$row[4],$row[5], $row[6]));
-			echo $citiesDeck[0];
+			$city = new City($row[0], $row[1], $row[2],$row[3],$row[4],$row[5], $row[6])
+			array_push($citiesDeck, $city);
+			
+			echo $city;
 		}
 		
 	}
