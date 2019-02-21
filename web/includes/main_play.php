@@ -27,9 +27,9 @@
 //beginning setup
 var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
 var citiesDeck = JSON.parse(stringCitiesDeck);
-var board = $('#board-placeholder');
+var table = $('#board-placeholder');
 var center = citiesDeck.pop();
-var longitudeCities = [center];
-var latitudeCities = [center];
-
+longitudeCities = [center];
+latitudeCities = [center];
+citiesInPlay =[longitudeCities, latitudeCities];
 </script>
