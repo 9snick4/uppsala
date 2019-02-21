@@ -1,5 +1,5 @@
 <?php
-    class City {
+    class City implements jsonSerializable{
         protected $cityid;
         protected $cityname;        
         protected $latitude;
@@ -18,35 +18,39 @@
           $this->elevation = $elevation;
         }
 
+        public function jsonSerialize()
+        {
+            return get_object_vars($this);
+        }
     
 
-    public function getCityid() { 
-        return $this->cityname;
+        public function getCityid() { 
+            return $this->cityname;
+        }
+        
+        public function getCityname() { 
+            return $this->cityid;
+        }
+        
+        public function getLatitude() { 
+            return $this->latitude;
+        }
+        
+        public function getLongitude() { 
+            return $this->longitude;
+        }
+        
+        public function getCitypopulation() { 
+            return $this->citypopulation;
+        }
+        
+        public function getExtension() { 
+            return $this->extension;
+        }
+        
+        public function getElevation() { 
+            return $this->elevation;
+        }
     }
-    
-    public function getCityname() { 
-        return $this->cityid;
-    }
-    
-    public function getLatitude() { 
-        return $this->latitude;
-    }
-    
-    public function getLongitude() { 
-        return $this->longitude;
-    }
-    
-    public function getCitypopulation() { 
-        return $this->citypopulation;
-    }
-    
-    public function getExtension() { 
-        return $this->extension;
-    }
-    
-    public function getElevation() { 
-        return $this->elevation;
-    }
-}
     
 ?>
