@@ -14,15 +14,15 @@
 		foreach ($db->query("SELECT city.cityid, cityname,latitude,longitude,citypopulation,Extension,Elevation FROM city ORDER BY random() LIMIT 15") as $row)
 		{
 			array_push($citiesDeck, new City ( $row["cityid"], $row["cityname"], $row["latitude"],$row["longitude"],$row["citypopulation"],$row["Extension"], $row["Elevation"]));
+			echo $row["cityid"];
 		}
 		
 	}
-	$_SESSION["citiesdeck"] = $citiesDeck;
 ?>
 
 <script>
 
-var stringCitiesDeck = "<?php echo json_encode($_SESSION["citiesdeck"]); ?>";
+var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
 var citiesDeck = JSON.parse(stringCitiesDeck);
 
 </script>
