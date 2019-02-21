@@ -1,5 +1,4 @@
 <?php
-	require("phpobjects/city.php");
 	$citiesDeck = array();
 	if(!isset($_SESSION["gameid"]))
 	{
@@ -13,12 +12,19 @@
 		$db = get_db();
 		foreach ($db->query("SELECT city.cityid, cityname,latitude,longitude,citypopulation,Extension,Elevation FROM city ORDER BY random() LIMIT 15") as $row)
 		{
-			$city = new City($row[0], $row[1], $row[2],$row[3],$row[4],$row[5], $row[6]);
+
+			$city->cityid = $row[0];
+			$city->cityname = $row[1];
+			$city->latitude = $row[2];
+			$city->longitude = $row[3];
+			$city->citypopulation = $row[4];
+			$city->Extension = $row[5];
+			$city->Elevation = $row[6];
 			array_push($citiesDeck, $city);
 			
-			var_dump($city);
+			
 		}
-		
+		var_dump($citiesDeck);
 	}
 ?>
 
