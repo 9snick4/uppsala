@@ -1,8 +1,8 @@
 <?php
 	require("phpobjects/city.php");
 	$citiesDeck = array();
-	if(!isset($_SESSION["gameid"]))
-	{
+	//if(!isset($_SESSION["gameid"]))
+	//{
 		require("templates/dbConnect.php");
 		$db = get_db();
 		$pdo=$db->prepare("SELECT nextval('game_gameid_seq')");
@@ -19,7 +19,7 @@
 			
 		}
 		var_dump($citiesDeck);
-	}
+	//}
 ?>
 
 <script>
