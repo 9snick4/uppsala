@@ -14,9 +14,9 @@
 		{
 			array_push($citiesDeck, new City ( $row["cityid"], $row["cityname"], $row["Latitude"],$row["Longitude"],$row["citypopulation"],$row["Extension"], $row["Elevation"]));
 		}
-		echo $citiesDeck;
-}
-
+		
+	}
+	echo $citiesDeck;
 ?>
 
 <script>
