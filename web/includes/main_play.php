@@ -20,9 +20,7 @@
 			$city->citypopulation = $row[4];
 			$city->Extension = $row[5];
 			$city->Elevation = $row[6];
-			array_push($citiesDeck, $city);
-			
-			
+			array_push($citiesDeck, $city);		
 		}
 		var_dump($citiesDeck);
 	}
