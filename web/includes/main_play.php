@@ -29,7 +29,6 @@ function utf8ize($d) {
 			
 			
 		}
-		var_dump($citiesDeck);
 	//}
 ?>
 
