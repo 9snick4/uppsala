@@ -17,12 +17,12 @@
 		}
 		
 	}
-	echo $citiesDeck;
+	$_SESSION["citiesdeck"] = $citiesDeck;
 ?>
 
 <script>
 
-var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
+var stringCitiesDeck = "<?php echo json_encode($_SESSION["citiesdeck"]); ?>";
 var citiesDeck = JSON.parse(stringCitiesDeck);
 
 </script>
