@@ -18,7 +18,7 @@
           $this->elevation = $elevation;
         }
 
-    }
+    
 
     public function getCityid() { 
         return $this->cityname;
@@ -47,6 +47,6 @@
     public function getElevation() { 
         return $this->elevation;
     }
-    
+}
     
 ?>
