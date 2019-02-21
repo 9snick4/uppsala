@@ -1,14 +1,5 @@
 <?php
-function utf8ize($d) {
-    if (is_array($d)) {
-        foreach ($d as $k =&amp;gt; $v) {
-            $d[$k] = utf8ize($v);
-        }
-    } else if (is_string ($d)) {
-        return utf8_encode($d);
-    }
-    return $d;
-}
+
 
 	require("phpobjects/city.php");
 	$citiesDeck = array();
@@ -34,7 +25,7 @@ function utf8ize($d) {
 
 <script>
 
-var stringCitiesDeck = "<?php echo json_encode(utf8ize($citiesDeck)); ?>";
+var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
 var citiesDeck = JSON.parse(stringCitiesDeck);
 
 </script>
