@@ -31,7 +31,7 @@
 
 <script type="text/javascript">
 //beginning setup
-var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
+var stringCitiesDeck = '<?php echo json_encode($citiesDeck); ?>';
 var citiesDeck = JSON.parse(stringCitiesDeck);
 var table = $('#board-placeholder');
 var center = citiesDeck.pop();
