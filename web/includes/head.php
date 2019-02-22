@@ -21,7 +21,7 @@ session_start();
 
 <!-- Custom styles for this template -->
 <link href="css/one-page-wonder.css" rel="stylesheet">
-
+<link href="css/uppsala.css" rel="stylesheet">
 <link href="css/stefano.css" rel="stylesheet">
 
 <!--favicon-->

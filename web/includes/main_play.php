@@ -37,9 +37,8 @@ latitudeCities.push(center);
 citiesInPlay.push(longitudeCities);
 citiesInPlay.push(latitudeCities);
 draw(citiesInPlay,center, table);
-$.cookie.json = true;
-$.cookie("board", citiesInPlay);
-$.cookie("center", center);
+Cookies.set("board", citiesInPlay);
+Cookies.set("center", center);
 </script>
 
 <!-- latitude-modal -->

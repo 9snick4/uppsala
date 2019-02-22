@@ -1,0 +1,76 @@
+.card_container {
+	background: #d0c7c0;
+	width: 600px;
+	height: 300px;
+}
+
+.row{
+	margin-left: unset;
+	height: 100%;
+}
+#bootstrap_override .directions{
+    height: 20%;
+	width: 100%;
+	background:#1d336d;
+	margin:10px;
+	border-radius: 15px;
+}
+#bootstrap_override .degrees{
+	color: #fff;
+	font-size: 40px;
+	position: relative;
+	text-align: right;
+	width: 80%;
+	padding: 0 25px;
+}
+#bootstrap_override .arrow{
+	transform: rotate(90deg);
+	position: relative;
+	left: 25px;
+	top: 10%;
+	height: 80%;
+	object-fit: contain;
+}
+#bootstrap_override .city_container{
+	border: 2px solid black;
+	border-radius: 10px;
+	height: 45%;
+	margin-left: 10px;
+	position: relative;
+}
+#bootstrap_override .city{
+ 	font-size: 30px;
+ 	color: #333;
+ 	margin-left: 10px;
+}
+#bootstrap_override .state{
+	position: absolute;
+	top: 45px;
+	left: 20px;
+}
+.number{
+	position: absolute;
+	left: 80px;
+	bottom: 10px;
+}
+.omini{
+	background:red;
+	width: 50px;
+	height: 50px;
+	position:absolute;
+	bottom: 10px;
+	left: 15px;
+}
+.state_image{
+	border:2px solid black;
+	border-radius: 10px;
+	background:magenta;
+	margin: 15px;
+}
+.state_flag{
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: red;
+}
