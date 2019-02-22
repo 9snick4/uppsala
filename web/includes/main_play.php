@@ -1,11 +1,11 @@
 <script src="javascript/bonvoyage.js"> </script>
 
-<body class="container" id="bootstrap_override">
+<div class="container" id="bootstrap_override">
   <div class="map-container" id ='board-placeholder'>
   </div>
   <div id="hand-container"></div>
   <div id="points-container"></div>
-</body>
+</div>
 <?php
 
 
