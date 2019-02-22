@@ -29,7 +29,7 @@
 	//}
 ?>
 
-<script>
+<script type="text/javascript">
 //beginning setup
 var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
 var citiesDeck = JSON.parse(stringCitiesDeck);
