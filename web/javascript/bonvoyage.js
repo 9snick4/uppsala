@@ -48,10 +48,11 @@ function drawCard(city, modal)
     var col4 = $("<div>").addClass("col-4").addClass("state_image").append($("<div>").addClass("state_flag"));
     row.append(col4);
     card.append(row);
-    card.on('click', function() {
-        $(modal).modal();
-        Cookies.set("neighbor", city.cityid);
-    });
+    if (modal !== '')
+        card.on('click', function() {
+            $(modal).modal();
+            Cookies.set("neighbor", city.cityid);
+        });
     return card;
 }
 
