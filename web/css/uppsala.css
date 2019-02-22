@@ -1,3 +1,52 @@
+.map_container {
+	display:flex;
+}
+.center-container {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+}
+.hidden {
+	visibility: hidden;
+}
+
+.north-container {
+	flex-direction: column-reverse;
+	overflow: auto;
+	position: absolute;
+	top: 0px;
+	right: 50%;
+	width: 200px;
+	height: 100px;
+}
+
+.west-container {
+	flex-direction: row-reverse;
+	overflow: auto;
+	top: 50%;
+	right: 0;
+	width: 200px;
+	height: 100px;
+}
+
+.east-container {
+	flex-direction: row;
+	overflow: auto;
+	top: 50%;
+	right: 60%;
+	width: 200px;
+	height: 100px;
+}
+
+.south-container {
+	flex-direction: column;
+	overflow: auto;
+	top: 60%;
+	right: 50%;
+	width: 200px;
+	height: 100px;
+}
+
 .card_container {
 	background: #d0c7c0;
 	width: 600px;

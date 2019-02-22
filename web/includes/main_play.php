@@ -1,5 +1,11 @@
 <script src="javascript/bonvoyage.js"> </script>
-<div class="container" id="board-placeholder"></div>
+
+<body class="container" id="bootstrap_override">
+  <div class="map-container" id ='board-placeholder'>
+  </div>
+  <div id="hand-container"></div>
+  <div id="points-container"></div>
+</body>
 <?php
 
 
@@ -29,20 +35,25 @@ var stringCitiesDeck = "<?php echo json_encode($citiesDeck); ?>";
 var citiesDeck = JSON.parse(stringCitiesDeck);
 var table = $('#board-placeholder');
 var center = citiesDeck.pop();
-var longitudeCities = new Array(); //beginning to end of array = south to north
-var latitudeCities =  new Array(); //beginning to end of array = east to west
+var hand = citiesDeck.pop();
+var northCities = new Array(); 
+var southCities =  new Array(); 
+var westCities = new Array(); 
+var eastCities =  new Array(); 
 var citiesInPlay =  new Array();
-longitudeCities.push(center);
-latitudeCities.push(center);
-citiesInPlay.push(longitudeCities);
-citiesInPlay.push(latitudeCities);
-draw(citiesInPlay,center, table);
+citiesInPlay.push(northCities);
+citiesInPlay.push(southCities);
+citiesInPlay.push(eastCities);
+citiesInPlay.push(westCities);
+draw(citiesInPlay,center, table, hand);
 Cookies.set("board", citiesInPlay);
 Cookies.set("center", center);
+Cookies.set("deck", citiesDeck);
+Cookies.set("hand", hand);
 </script>
 
-<!-- latitude-modal -->
-<div class="modal fade" id="latitude-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- north-modal -->
+<div class="modal fade" id="east-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <!--Header-->
@@ -56,8 +67,8 @@ Cookies.set("center", center);
       <div class="modal-body">
 		<form id="reg-form-gamer" class="needs-validation">
 			<div class="form-group">
-				<button class="btn btn-secondary" onclick="playCard('n');">North</button>
-				<button class="btn btn-secondary" onclick="playCard('s');">South</button>
+				<button class="btn btn-secondary" onclick="playCard('n', true);">North</button>
+				<button class="btn btn-secondary" onclick="playCard('n', false);">South</button>
 			</div>
 		</form>
       </div>
@@ -69,8 +80,36 @@ Cookies.set("center", center);
   </div>
 </div>
 
-<!-- longitude-modal -->
-<div class="modal fade" id="longitude-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- east-modal -->
+<div class="modal fade" id="east-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">East or West?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+		<form id="reg-form-gamer" class="needs-validation">
+			<div class="form-group">
+				<button class="btn btn-secondary" onclick="playCard('e', true);">East</button>
+				<button class="btn btn-secondary" onclick="playCard('e', false);">West</button>
+			</div>
+		</form>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- south-modal -->
+<div class="modal fade" id="south-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <!--Header-->
@@ -84,8 +123,36 @@ Cookies.set("center", center);
       <div class="modal-body">
 		<form id="reg-form-gamer" class="needs-validation">
 			<div class="form-group">
-				<button class="btn btn-secondary" onclick="playCard('e');">East</button>
-				<button class="btn btn-secondary" onclick="playCard('w');">West</button>
+				<button class="btn btn-secondary" onclick="playCard('s', false);">North</button>
+				<button class="btn btn-secondary" onclick="playCard('s', true);">South</button>
+			</div>
+		</form>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- west-modal -->
+<div class="modal fade" id="west-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">East or west?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+		<form id="reg-form-gamer" class="needs-validation">
+			<div class="form-group">
+				<button class="btn btn-secondary" onclick="playCard('w', false);">East</button>
+				<button class="btn btn-secondary" onclick="playCard('w', true);">West</button>
 			</div>
 		</form>
       </div>
@@ -112,10 +179,10 @@ Cookies.set("center", center);
       <div class="modal-body">
 		<form id="reg-form-gamer" class="needs-validation">
 			<div class="form-group">
-        <button class="btn btn-secondary" onclick="playCard('n');">North</button>
-				<button class="btn btn-secondary" onclick="playCard('s');">South</button>
-				<button class="btn btn-secondary" onclick="playCard('e');">East</button>
-				<button class="btn btn-secondary" onclick="playCard('w');">West</button>
+        <button class="btn btn-secondary" onclick="playCard('n', false);">North</button>
+				<button class="btn btn-secondary" onclick="playCard('s', false);">South</button>
+				<button class="btn btn-secondary" onclick="playCard('e', false);">East</button>
+				<button class="btn btn-secondary" onclick="playCard('w', false);">West</button>
 			</div>
 		</form>
       </div>

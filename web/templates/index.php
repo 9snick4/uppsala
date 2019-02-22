@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-7">
 				<div class="row directions" >
-					<img src="left-arrow.png" class="arrow">
+					<img src="img/left-arrow.png" class="arrow">
 					<span class="degrees">41° 00'</span>
 				</div>
 				<div class="row directions">
