@@ -96,3 +96,33 @@ Cookies.set("center", center);
     </div>
   </div>
 </div>
+
+<!-- center-modal -->
+<div class="modal fade" id="center-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">North, south, East or West?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+		<form id="reg-form-gamer" class="needs-validation">
+			<div class="form-group">
+        <button class="btn btn-secondary" onclick="playCard('n');">North</button>
+				<button class="btn btn-secondary" onclick="playCard('s');">South</button>
+				<button class="btn btn-secondary" onclick="playCard('e');">East</button>
+				<button class="btn btn-secondary" onclick="playCard('w');">West</button>
+			</div>
+		</form>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
