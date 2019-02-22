@@ -49,7 +49,7 @@ function drawCard(city, modal)
     row.append(col4);
     card.append(row);
     card.on('click', function() {
-        $(modal).modal(options);
+        $(modal).modal();
         Cookies.set("neighbor", city.cityid);
     });
     return card;
